@@ -24,5 +24,21 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install packages
       run: |
+        touch test.txt
         pwd
-        npm install
+        ls -la
+
+  lint:
+    needs: checkout
+    runs-on: ubuntu-latest
+    container: 
+      image: node:latest
+      env:
+        NODE_ENV: development
+      volumes:
+        - node_modules:/node_modules
+    steps:
+    - name: Test
+      run: |
+        pwd
+        ls -la
