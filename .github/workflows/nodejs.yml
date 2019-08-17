@@ -18,7 +18,6 @@ jobs:
         NODE_ENV: development
     steps:
     - uses: actions/checkout@v1
-    - name: Use Node.js
     - name: Install packages
       run: |
         npm install
