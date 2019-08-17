@@ -18,7 +18,8 @@ jobs:
       env:
         NODE_ENV: development
       volumes:
-        - node_modules:/node_modules
+        - node_modules:/__w/next-typescript-template/next-typescript-template
+
  
     steps:
     - uses: actions/checkout@v1
@@ -36,7 +37,7 @@ jobs:
       env:
         NODE_ENV: development
       volumes:
-        - node_modules:/node_modules
+        - node_modules:/__w/next-typescript-template/next-typescript-template
     steps:
     - name: Test
       run: |
