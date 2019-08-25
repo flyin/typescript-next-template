@@ -1,6 +1,6 @@
 name: Node CI
 
-on: 
+on:
   push:
     branches:
     - master
@@ -13,33 +13,13 @@ on:
 jobs:
   checkout:
     runs-on: ubuntu-latest
-    container: 
+    container:
       image: node:latest
-      env:
-        NODE_ENV: development
-      volumes:
-        - node_modules:/__w/next-typescript-template/next-typescript-template
 
- 
     steps:
     - uses: actions/checkout@v1
     - name: Install packages
       run: |
-        touch test.txt
-        pwd
-        ls -la
-
-  lint:
-    needs: checkout
-    runs-on: ubuntu-latest
-    container: 
-      image: node:latest
-      env:
-        NODE_ENV: development
-      volumes:
-        - node_modules:/__w/next-typescript-template/next-typescript-template
-    steps:
-    - name: Test
-      run: |
-        pwd
-        ls -la
+        yarn
+        yarn lint
+        yarn test

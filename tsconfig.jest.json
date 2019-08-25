@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "allowJs": true,
+        "jsx": "react"
+    },
+    "extends": "./tsconfig.json",
+    "include": [
+        "next-env.d.ts",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.js",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

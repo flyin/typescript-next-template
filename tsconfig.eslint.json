@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "allowJs": true
+    },
+    "extends": "./tsconfig.json",
+    "include": [
+        "next-env.d.ts",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.js",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
