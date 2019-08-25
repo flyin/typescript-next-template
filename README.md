@@ -1,1 +1,1 @@
-# next-typescript-template
+# typescript-next-template
