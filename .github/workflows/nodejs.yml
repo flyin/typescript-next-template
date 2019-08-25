@@ -11,14 +11,14 @@ on:
     - master
 
 jobs:
-  checkout:
+  test:
     runs-on: ubuntu-latest
     container:
       image: node:latest
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install packages
+    - name: Install packages and test
       run: |
         yarn
         yarn lint
